@@ -1,0 +1,6 @@
+@DeckziApi_HostAddress = http://localhost:5193
+
+GET {{DeckziApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

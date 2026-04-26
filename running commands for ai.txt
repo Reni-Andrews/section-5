@@ -1,0 +1,77 @@
+Terminal 1: Python FastAPI (The AI Assistant)
+This terminal handles the Gemini AI connection and MongoDB.
+
+PowerShell
+cd "E:\section 5\fastapi-backend"
+.\venv\Scripts\activate
+uvicorn main:app --reload --port 8000
+Wait for: INFO: Application startup complete.
+
+---------------------------------------------------------
+
+Terminal 2: .NET Backend (The User & Auth Manager)
+This terminal handles your MySQL database and User Login/Registration.
+
+PowerShell
+cd "E:\section 5\dotnet-backend\DeckziApi"
+dotnet run --urls="http://localhost:5193"
+Wait for: Now listening on: http://localhost:5193
+
+----------------------------------------------------------
+
+Terminal 3: Angular Frontend (The UI)
+This terminal launches the actual website you see in the browser.
+
+PowerShell
+cd "E:\section 5\angular-frontend"
+ng serve --open
+Wait for: Compiled successfully.
+
+-----------------------------------------------------------
+
+section 5/
+├── fastapi-backend/        # AI & Chat (Python)
+│   ├── main.py
+│   ├── requirements.txt
+│   ├── .env.example
+│   ├── routers/
+│   │   ├── chat.py         # /chat, /history, /clear
+│   │   └── auth.py         # JWT auth
+│   ├── models/
+│   │   └── conversation.py # MongoDB models
+│   ├── services/
+│   │   ├── gemini_service.py
+│   │   ├── safety_service.py
+│   │   └── history_service.py
+│   └── middleware/
+│       └── auth_middleware.py
+│
+├── dotnet-backend/         # Transactional (C#)
+│   ├── DeckziApi/
+│   │   ├── Program.cs
+│   │   ├── Controllers/
+│   │   │   ├── AuthController.cs
+│   │   │   └── UserProfileController.cs
+│   │   ├── Models/
+│   │   │   └── User.cs
+│   │   ├── Services/
+│   │   │   └── JwtService.cs
+│   │   └── Data/
+│   │       └── AppDbContext.cs
+│   └── appsettings.json
+│
+└── angular-frontend/       # UI (Angular)
+    ├── src/app/
+    │   ├── pages/
+    │   │   ├── login/
+    │   │   ├── register/
+    │   │   ├── chat/
+    │   │   └── profile/
+    │   ├── services/
+    │   │   ├── auth.service.ts
+    │   │   ├── chat.service.ts
+    │   │   └── profile.service.ts
+    │   ├── guards/
+    │   │   └── auth.guard.ts
+    │   └── interceptors/
+    │       └── jwt.interceptor.ts

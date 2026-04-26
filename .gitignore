@@ -1,0 +1,59 @@
+# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
+
+# --- Angular ---
+/angular-frontend/dist
+/angular-frontend/tmp
+/angular-frontend/out-tsc
+/angular-frontend/bazel-out
+/angular-frontend/node_modules
+/angular-frontend/.angular/cache
+
+# --- Python (FastAPI) ---
+**/__pycache__/
+**/*.py[cod]
+**/*$py.class
+**/venv/
+**/.venv/
+**/env/
+**/.env
+**/.env.*
+!**/.env.example
+
+# --- .NET ---
+**/bin/
+**/obj/
+**/appsettings.Development.json
+**/*.user
+**/*.suo
+**/*.userosscache
+**/*.sln.docstates
+
+# IDEs and editors
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/mcp.json
+.history/*
+
+# Miscellaneous
+.sass-cache/
+/connect.lock
+/coverage
+/libpeerconnection.log
+testem.log
+/typings
+__screenshots__/
+
+# System files
+.DS_Store
+Thumbs.db
+
