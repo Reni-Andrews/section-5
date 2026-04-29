@@ -9,10 +9,15 @@ Full-stack AI-powered chat application built with:
 
 ## Architecture
 
-```
-Angular Frontend (port 4200)
-    ├── FastAPI Backend (port 8000)  →  Gemini API + MongoDB
-    └── .NET Core Backend (port 5000)  →  MySQL
+For a detailed view of the system components and connections, see the [Architecture Diagram](architecture_diagram.md).
+
+```mermaid
+graph TD
+    A[Angular Frontend] --> B[FastAPI Backend]
+    A --> C[.NET Core Backend]
+    B --> D[Gemini API]
+    B --> E[MongoDB]
+    C --> F[MySQL]
 ```
 
 ## Quick Start
