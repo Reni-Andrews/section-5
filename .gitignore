@@ -12,6 +12,7 @@
 **/__pycache__/
 **/*.py[cod]
 **/*$py.class
+venv/
 **/venv/
 **/.venv/
 **/env/
@@ -27,6 +28,9 @@
 **/*.suo
 **/*.userosscache
 **/*.sln.docstates
+**/*.pdb
+**/*.exe
+**/*.dll
 
 # IDEs and editors
 .idea/
@@ -52,8 +56,20 @@
 testem.log
 /typings
 __screenshots__/
+*.log
+
+# Archives
+*.zip
+*.7z
+*.rar
+*.tar.gz
 
 # System files
 .DS_Store
 Thumbs.db
+desktop.ini
+
+# Project Specific
+"section 5 recording.mp4"
+"running commands for ai.txt"
 
